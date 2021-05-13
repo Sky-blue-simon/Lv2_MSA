@@ -11,4 +11,6 @@
   - /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server http://localhost:9092 --topic topic_example --from-beginning
  5) hello world 라는 메세지 publish 해보기
 
-![모델링](https://user-images.githubusercontent.com/80744224/117770158-93758a80-b26f-11eb-8f69-a4c8f2ac8760.jpg)
+2. Httpie
+   REST Client 툴 httpie 설치(Windows): 
+      https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-설치
