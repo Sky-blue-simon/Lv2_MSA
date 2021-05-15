@@ -29,14 +29,14 @@ cd kafka_2.13-2.5.0/bin
 ## 테스트 시나리오
 아래는 테스트 시나리오 입니다 (아참 포트가 하나인 이유는 gateway까지 실행해 주세요)
 
-//강의 등록
-http POST http://localhost:8088/courses name=english teacher=hong fee=10000 textBook=eng_book
+- 강의 등록
+  http POST http://localhost:8088/courses name=english teacher=hong fee=10000 textBook=eng_book
 
-//강의 확인
-http GET http://localhost:8088/courses
+- 강의 확인
+  http GET http://localhost:8088/courses
 
-//수강 신청
-http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book
+- 수강 신청
+  http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book
 
 //수강 등록 확인
 http GET http://localhost:8088/classes
