@@ -24,7 +24,7 @@
      kill -9 pid 하고 다시 띄워준다
 
 
-1. Kafka 
+## Kafka Topic 
 
 1.1) Topic 생성
   - /usr/local/kafka/bin/kafka-topics.sh --bootstrap-server http://localhost:9092 --topic topic_example --create --partitions 1 --replication-factor 1
