@@ -1,10 +1,46 @@
 # Lv2_MSA
 
+## Zookeeper 및 Kafka 서버 실행
+ 1. Zookeeper 기동 후 Kafka 기동
+   - Kafka 설치 경로로 이동
+     - cd kafka_2.13-2.5.0/bin
+     - ./zookeeper-server-start.sh .../config/zookeeper.properties
+
+
+Zookeeper 및 Kafka 서버 구동
+Zookeeper 기동 후 Kafka 기동
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
+$ bin/kafka-server-start.sh config/server.properties
+
+zookeeper 실행
+cd kafka_2.13-2.5.0/bin
+./zookeeper-server-start.sh …/config/zookeeper.properties
+
+kafka 실행
+cd kafka_2.13-2.5.0/bin
+./kafka-server-start.sh …/config/server.properties
+
+***cd 카프카설치 경로/bin/windows
+zookeeper-server-start.bat ../../config/zookeeper.properties
+kafka-server-start.bat ../../config/server.properties
+
+- zookeeper 
+cd 카프카설치 경로/bin/windows
+zookeeper-server-start.bat ../../config/zookeeper.properties	
+
+-kafka
+cd 카프카설치 경로/bin/windows
+kafka-server-start.bat ../../config/server.properties
+
+****-- 이벤트 수신하기
+kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic shop --from-beginning
+kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic shop --from-beginning
+
 ## Kafka 설치
-    - https://dev-jj.tistory.com/entry/MAC-Kafka-%EB%A7%A5%EC%97%90-Kafka-%EC%84%A4%EC%B9%98-%ED%95%98%EA%B8%B0-Docker-homebrew-Apache
-    - https://jdm.kr/blog/208
-    1. 경로 이동 /Users/jinhyeonbak/intensive/kafka_2.12-2.3.0/bin
-    2. 주키퍼 실행  
+
+
+
+2. 주키퍼 실행  
      ./zookeeper-server-start.sh ../config/zookeeper.properties &
     3. 카프카 broker 실행  
      ./kafka-server-start.sh ../config/server.properties
