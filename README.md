@@ -26,6 +26,49 @@ kafka 실행
 cd kafka_2.13-2.5.0/bin
 ./kafka-server-start.sh …/config/server.properties
 
+## 테스트 시나리오
+아래는 테스트 시나리오 입니다 (아참 포트가 하나인 이유는 gateway까지 실행해 주세요)
+
+//강의 등록
+http POST http://localhost:8088/courses name=english teacher=hong fee=10000 textBook=eng_book
+
+//강의 확인
+http GET http://localhost:8088/courses
+
+//수강 신청
+http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book
+
+//수강 등록 확인
+http GET http://localhost:8088/classes
+
+//결제 확인
+http GET http://localhost:8088/payments
+
+//배송 시작 확인
+http GET http://localhost:8088/deliveries
+
+//My page 확인
+http GET http://localhost:8088/inquiryMypages
+
+//수강 취소할 Class 확인
+http GET http://localhost:8088/classes
+
+//수강 취소
+http DELETE http://localhost:8088/classes/1
+
+//수강 삭제 확인
+http GET http://localhost:8088/classes
+
+//결제 취소 확인 (상태값 "PAYMENT_CANCELED" 확인)
+http GET http://localhost:8088/payments
+
+//배송 취소 확인 (상태값 "DELIVERY_CANCELED" 확인)
+http GET http://localhost:8088/deliveries
+
+//My page 확인 (상태값 "CLASS_CANCELED", "PAYMENT_CANCELED", "DELIVERY_CANCELED" 확인)
+http GET http://localhost:8088/inquiryMypages
+
+
 ***cd 카프카설치 경로/bin/windows
 zookeeper-server-start.bat ../../config/zookeeper.properties
 kafka-server-start.bat ../../config/server.properties
