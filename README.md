@@ -4,13 +4,13 @@
  1. Zookeeper 기동 후 Kafka 기동
    - Kafka 설치 경로로 이동
    - cd 카프카설치경로/bin/windows
-   - cd kafka_2.13-2.5.0/bin/windows
+   - cd kafka_2.13-2.8.0/bin/windows
    - zookeeper-server-start.bat ../../config/zookeeper.properties
 
 2. Kafka 기동
   - Kafka 설치 경로로 이동
   - cd 카프카설치경로/bin/windows
-  - cd kafka_2.13-2.5.0/bin/windows
+  - cd kafka_2.13-2.8.0/bin/windows
   - kafka-server-start.bat ../../config/server.properties
 
 Zookeeper 및 Kafka 서버 구동
