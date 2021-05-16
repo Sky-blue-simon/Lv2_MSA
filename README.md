@@ -196,9 +196,9 @@ Docker 테스트
 ## 파이프라인 샘플
 ![image](https://user-images.githubusercontent.com/80744224/118383378-16b02b00-b638-11eb-896e-d4de890f18cd.png)
 
-GitLab - 소스코드 형상관리 도구
-Jenkins - CI 도구
-Docker - 컨테이너 도구
-Spinnaker - CD 도구
-Helm - 쿠버네티스 패키지 관리 도구
-Kubernetes - 배포 플랫폼
+- GitLab - 소스코드 형상관리 도구
+- Jenkins - CI 도구
+- Docker - 컨테이너 도구
+- Spinnaker - CD 도구
+- Helm - 쿠버네티스 패키지 관리 도구
+- Kubernetes - 배포 플랫폼
