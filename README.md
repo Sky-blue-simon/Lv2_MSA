@@ -166,13 +166,15 @@ $ kafka-topics.bat --zookeeper localhost:2181 --topic cna --create --partitions 
 
 $ kafka-topics.bat --zookeeper localhost:2181 --list
 
-1.3) 새로운 터미널 창에서 kafka producer 연결 후 메세지 publish
 
-- /usr/local/kafka/bin/kafka-console-producer.sh --broker-list http://localhost:9092 --topic topic_example
+1.3) 새로운 터미널 창에서 kafka producer 연결 후 메세지 publish(이벤트 보내기)
+
+$ kafka-console-producer.bat --broker-list http://localhost:9092 --topic cna
+
 
 1.4) 새로운 터미널 창에서 kafka consumer 연결 후 메세지 subscribe
 
-- /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server http://localhost:9092 --topic topic_example --from-beginning
+$ kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic cna --from-beginning
 
 1.5) hello world 라는 메세지 publish 해보기
 
