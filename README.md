@@ -144,6 +144,10 @@ kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic shop
 1.1) Topic 생성
   - /usr/local/kafka/bin/kafka-topics.sh --bootstrap-server http://localhost:9092 --topic topic_example --create --partitions 1 --replication-factor 1
 
+## 토픽 생성
+cd cd 카프카설치 경로/bin/windows
+$ kafka-topics.bat --zookeeper localhost:2181 --topic cna --create --partitions 1 --replication-factor 1
+
 1.2) 토픽 리스트 보기
   - /usr/local/kafka/bin/kafka-topics.sh --bootstrap-server http://localhost:9092 --list    
 
