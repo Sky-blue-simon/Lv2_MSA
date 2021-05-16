@@ -202,3 +202,7 @@ Docker 테스트
 - Spinnaker - CD 도구
 - Helm - 쿠버네티스 패키지 관리 도구
 - Kubernetes - 배포 플랫폼
+
+
+## 최종 평가
+https://workflowy.com/s/assessment/qJn45fBdVZn4atl3
