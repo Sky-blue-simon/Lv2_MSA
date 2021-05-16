@@ -13,6 +13,9 @@
   - cd kafka_2.13-2.8.0/bin/windows
   - kafka-server-start.bat ../../config/server.properties
 
+Kafka 수행 내역 확인
+kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic eventTopic --from-beginning
+
 Zookeeper 및 Kafka 서버 구동
 Zookeeper 기동 후 Kafka 기동
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
