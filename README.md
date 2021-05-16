@@ -30,6 +30,7 @@ cd kafka_2.13-2.5.0/bin
 아래는 테스트 시나리오 입니다 (아참 포트가 하나인 이유는 gateway까지 실행해 주세요)
 
 - 강의 등록
+  
   http POST http://localhost:8088/courses name=english teacher=hong fee=10000 textBook=eng_book
   http POST http://localhost:8088/courses name=math teacher=park fee=20000 textBook=math_book
 
