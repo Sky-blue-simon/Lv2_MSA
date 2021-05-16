@@ -38,6 +38,11 @@ cd kafka_2.13-2.5.0/bin
 학생이 수강 취소를 하였을 때, 수강 신청이 취소가 되고, 결제가 취소되고, 배송이 취소됩니다.
 해당 서비스가 묶여서 함깨 작동하도록 트랜젝션이 묶여 있습니다.
 
+수강 : class, port 8081
+강의 : course, port 8082
+결재 : pay, port 8083
+
+
 - 강의 등록
   
   http POST http://localhost:8088/courses name=english teacher=hong fee=10000 textBook=eng_book
