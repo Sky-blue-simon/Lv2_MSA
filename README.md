@@ -40,7 +40,7 @@ cd kafka_2.13-2.5.0/bin
 
 - 수강 신청
   
-  http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book
+  http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book id=1
 
   http POST http://localhost:8088/classes courseId=2 fee=20000 student=soo textBook=math_book id=2
 
