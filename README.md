@@ -54,9 +54,9 @@ cd kafka_2.13-2.5.0/bin
 
 - 수강 신청
   
-  http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book id=1
+  http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book
 
-  http POST http://localhost:8088/classes courseId=2 fee=20000 student=soo textBook=math_book id=2
+  http POST http://localhost:8088/classes courseId=2 fee=20000 student=soo textBook=math_book
 
 - 수강 등록 확인
   
@@ -97,6 +97,11 @@ cd kafka_2.13-2.5.0/bin
 - My page 확인 (상태값 "CLASS_CANCELED", "PAYMENT_CANCELED", "DELIVERY_CANCELED" 확인)
   
   http GET http://localhost:8088/inquiryMypages
+  
+
+- 수강 신청내용 수정
+  
+  http POST http://localhost:8088/classes courseId=1 fee=9000 student=gil-dong textBook=eng_book
 
 
 ***cd 카프카설치 경로/bin/windows
