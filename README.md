@@ -31,6 +31,7 @@ cd kafka_2.13-2.5.0/bin
 
 - 강의 등록
   http POST http://localhost:8088/courses name=english teacher=hong fee=10000 textBook=eng_book
+  http POST http://localhost:8088/courses name=math teacher=park fee=20000 textBook=math_book
 
 - 강의 확인
   http GET http://localhost:8088/courses
