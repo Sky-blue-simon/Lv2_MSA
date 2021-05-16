@@ -105,7 +105,8 @@ cd kafka_2.13-2.5.0/bin
   
  - Parameter 값으로만 수정, 나머지 값은 다 삭제됨
 
-  http PUT http://localhost:8088/classes courseId=1 fee=2000 student=gil-dong
+  http PUT http://localhost:8088/classes/1 courseId=1 fee=2000 student=gil-dong
+
 
 
 ***cd 카프카설치 경로/bin/windows
