@@ -157,17 +157,22 @@ kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic shop
 
 ## 토픽 생성
 1.1) 토픽 생성
+
 cd cd 카프카설치 경로/bin/windows
+
 $ kafka-topics.bat --zookeeper localhost:2181 --topic cna --create --partitions 1 --replication-factor 1
 
 1.2) 토픽 리스트 보기
-  - /usr/local/kafka/bin/kafka-topics.sh --bootstrap-server http://localhost:9092 --list    
+
+- /usr/local/kafka/bin/kafka-topics.sh --bootstrap-server http://localhost:9092 --list    
 
 1.3) 새로운 터미널 창에서 kafka producer 연결 후 메세지 publish
-  - /usr/local/kafka/bin/kafka-console-producer.sh --broker-list http://localhost:9092 --topic topic_example
+
+- /usr/local/kafka/bin/kafka-console-producer.sh --broker-list http://localhost:9092 --topic topic_example
 
 1.4) 새로운 터미널 창에서 kafka consumer 연결 후 메세지 subscribe
-  - /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server http://localhost:9092 --topic topic_example --from-beginning
+
+- /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server http://localhost:9092 --topic topic_example --from-beginning
 
 1.5) hello world 라는 메세지 publish 해보기
 
