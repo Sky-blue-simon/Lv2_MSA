@@ -38,35 +38,35 @@ cd kafka_2.13-2.5.0/bin
 - 수강 신청
   http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book
 
-//수강 등록 확인
-http GET http://localhost:8088/classes
+- 수강 등록 확인
+  http GET http://localhost:8088/classes
 
-//결제 확인
-http GET http://localhost:8088/payments
+- 결제 확인
+  http GET http://localhost:8088/payments
 
-//배송 시작 확인
-http GET http://localhost:8088/deliveries
+- 배송 시작 확인
+  http GET http://localhost:8088/deliveries
 
-//My page 확인
-http GET http://localhost:8088/inquiryMypages
+- My page 확인
+  http GET http://localhost:8088/inquiryMypages
 
-//수강 취소할 Class 확인
-http GET http://localhost:8088/classes
+- 수강 취소할 Class 확인
+  http GET http://localhost:8088/classes
 
-//수강 취소
-http DELETE http://localhost:8088/classes/1
+- 수강 취소
+  http DELETE http://localhost:8088/classes/1
 
-//수강 삭제 확인
-http GET http://localhost:8088/classes
+- 수강 삭제 확인
+  http GET http://localhost:8088/classes
 
-//결제 취소 확인 (상태값 "PAYMENT_CANCELED" 확인)
-http GET http://localhost:8088/payments
+- 결제 취소 확인 (상태값 "PAYMENT_CANCELED" 확인)
+  http GET http://localhost:8088/payments
 
-//배송 취소 확인 (상태값 "DELIVERY_CANCELED" 확인)
-http GET http://localhost:8088/deliveries
+- 배송 취소 확인 (상태값 "DELIVERY_CANCELED" 확인)
+  http GET http://localhost:8088/deliveries
 
-//My page 확인 (상태값 "CLASS_CANCELED", "PAYMENT_CANCELED", "DELIVERY_CANCELED" 확인)
-http GET http://localhost:8088/inquiryMypages
+- My page 확인 (상태값 "CLASS_CANCELED", "PAYMENT_CANCELED", "DELIVERY_CANCELED" 확인)
+  http GET http://localhost:8088/inquiryMypages
 
 
 ***cd 카프카설치 경로/bin/windows
