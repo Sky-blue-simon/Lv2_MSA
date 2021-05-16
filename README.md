@@ -161,3 +161,11 @@ kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic shop
  
 2.1) REST Client 툴 httpie 설치(Windows): 
       https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-설치
+      
+## CI/CD
+마이크로 서비스에서 일반적으로 구성하는 CI 구성은 다음과 같습니다.
+소스코드 커밋
+소스코드 빌드
+소스코드 테스트
+Docker 빌드
+Docker 테스트
