@@ -1,38 +1,21 @@
 # Lv2_MSA
 
 ## Zookeeper 및 Kafka 서버 실행
- 1. Zookeeper 기동 후 Kafka 기동
+1. Zookeeper 기동 후 Kafka 기동
    - Kafka 설치 경로로 이동
    - cd 카프카설치경로/bin/windows
-   
-   cd kafka_2.13-2.8.0/bin/windows
-   
-   zookeeper-server-start.bat ../../config/zookeeper.properties
+   - cd kafka_2.13-2.8.0/bin/windows
+   - zookeeper-server-start.bat ../../config/zookeeper.properties
 
 2. Kafka 기동
   - Kafka 설치 경로로 이동
   - cd 카프카설치경로/bin/windows
-  
-  cd kafka_2.13-2.8.0/bin/windows
-  
-  kafka-server-start.bat ../../config/server.properties
+  - cd kafka_2.13-2.8.0/bin/windows
+  - kafka-server-start.bat ../../config/server.properties
 
- 3. Kafka 수행 내역 확인
-  
-  kafka-console-consumer.bat --bootstrap-server http://localhost:8083 --topic eventTopic --from-beginning
+3. Kafka 수행 내역 확인
+  - kafka-console-consumer.bat --bootstrap-server http://localhost:8083 --topic eventTopic --from-beginning
 
-Zookeeper 및 Kafka 서버 구동
-Zookeeper 기동 후 Kafka 기동
-$ bin/zookeeper-server-start.sh config/zookeeper.properties
-$ bin/kafka-server-start.sh config/server.properties
-
-zookeeper 실행
-cd kafka_2.13-2.5.0/bin
-./zookeeper-server-start.sh …/config/zookeeper.properties
-
-kafka 실행
-cd kafka_2.13-2.5.0/bin
-./kafka-server-start.sh …/config/server.properties
 
 ## 테스트 시나리오
 아래는 테스트 시나리오 입니다 (아참 포트가 하나인 이유는 gateway까지 실행해 주세요)
