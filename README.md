@@ -1,5 +1,11 @@
 # Lv2_MSA
 
+## Httpie
+1.REST Client 툴 httpie 설치(Windows): 
+  
+ - https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-설치
+      
+      
 ## Zookeeper 및 Kafka 서버 실행
 1. Zookeeper 기동 후 Kafka 기동
 - Kafka 설치 경로로 이동
@@ -129,10 +135,7 @@
   http GET http://localhost:8088/points
    
    
-2. Httpie
- 
-2.1) REST Client 툴 httpie 설치(Windows): 
-      https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-설치
+
       
 ## CI/CD
 마이크로 서비스에서 일반적으로 구성하는 CI 구성은 다음과 같습니다.
