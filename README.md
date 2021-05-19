@@ -56,6 +56,7 @@
   http POST http://localhost:8088/courses name=math teacher=park fee=20000 textBook=math_book
 
 - 강의 확인
+  
   http GET http://localhost:8088/courses
 
 - 수강 신청
