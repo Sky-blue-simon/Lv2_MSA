@@ -54,6 +54,10 @@
   http POST http://localhost:8088/courses name=english teacher=hong fee=10000 textBook=eng_book
   
   http POST http://localhost:8088/courses name=math teacher=park fee=20000 textBook=math_book
+  
+  http POST http://localhost:8088/courses name=math teacher=bong fee=30000 textBook=music_book
+  
+  http POST http://localhost:8088/courses name=math teacher=simon fee=40000 textBook=korean_book
 
 - 강의 확인
   
@@ -64,6 +68,10 @@
   http POST http://localhost:8088/classes courseId=1 fee=10000 student=gil-dong textBook=eng_book
 
   http POST http://localhost:8088/classes courseId=2 fee=20000 student=soo textBook=math_book
+  
+  http POST http://localhost:8088/classes courseId=3 fee=30000 student=lee textBook=music_book
+  
+  http POST http://localhost:8088/classes courseId=4 fee=40000 student=kim textBook=korean_book
 
 - 수강 등록 확인
   
