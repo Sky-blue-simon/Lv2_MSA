@@ -124,15 +124,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
+- point 확인
+  
+  http GET http://localhost:8088/points
+   
+   
 2. Httpie
  
 2.1) REST Client 툴 httpie 설치(Windows): 
