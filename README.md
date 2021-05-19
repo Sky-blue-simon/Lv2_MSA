@@ -2,16 +2,16 @@
 
 ## Zookeeper 및 Kafka 서버 실행
 1. Zookeeper 기동 후 Kafka 기동
-   - Kafka 설치 경로로 이동
-   - cd 카프카설치경로/bin/windows
-   - cd kafka_2.13-2.8.0/bin/windows
-   - zookeeper-server-start.bat ../../config/zookeeper.properties
+- Kafka 설치 경로로 이동
+- cd 카프카설치경로/bin/windows
+- cd kafka_2.13-2.8.0/bin/windows
+- zookeeper-server-start.bat ../../config/zookeeper.properties
 
 2. Kafka 기동
-  - Kafka 설치 경로로 이동
-  - cd 카프카설치경로/bin/windows
-  - cd kafka_2.13-2.8.0/bin/windows
-  - kafka-server-start.bat ../../config/server.properties
+- Kafka 설치 경로로 이동
+- cd 카프카설치경로/bin/windows
+- cd kafka_2.13-2.8.0/bin/windows
+- kafka-server-start.bat ../../config/server.properties
 
 3. Kafka 수행 내역 확인(이벤트 수신하기)
   - kafka-console-consumer.bat --bootstrap-server http://localhost:8083 --topic eventTopic --from-beginning
