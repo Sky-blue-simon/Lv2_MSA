@@ -234,6 +234,46 @@ Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니�
  - istio 설치
  - siege : http 로드테스트 도구
  
+## Kubernetes Clients Installation
+
+1. Kubectl 설치
+- Kubectl 설치
+   
+   - sudo apt-get update
+   - sudo apt-get install -y kubectl
+
+- 설치 확인
+   - kubectl version --client
+
+2. AWS CLI v2 tool Installation
+ - AWS CLI 설치
+     - curl "https://awscli.amazonaws.com/awscli exe linux x86_64.zip" o "awscliv2.zip“
+     - unzip awscliv2.zip
+       ㅇunzip 없을 시 , 설치 : sudo apt get install unzip
+     - sudo ./aws/install
+ 
+  - AWS CLI 설치 확인
+     - aws --version
+ 
+3. AWS CLI tool Configuration
+   
+   - AWS CLI 사용자 등록을 위한 자격증명 입력
+     aws configure
+   
+   - Profile 기반 AWS 서비스 관리
+     aws ec2 describe-instances --profile devuser
+     aws s3 ls --profile produser
+     
+    - AWS Profile 설정 확인
+     cat ~/.aws/config
+     cat ~/.aws/credentials
+     
+    - EKS Client(eksctl) Installation
+     - EKS 에서 Kubernetes 클러스터 생성 관리 도구
+     - Linux Curl 을 사용한 eksctl 설치(about 15' 소용)
+       curl --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz"|tar xz -C /tmp
+       sudo mv /tmp/eksctl /usr/local/bin
+
 
 
 ## 최종 평가
