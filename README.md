@@ -145,6 +145,44 @@
 Docker 빌드
 Docker 테스트
 
+## 환경 설정
+1. aws cli 설치
+
+ - https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/install-cliv2-windows.html
+ - aws configure 로 액세스 ID 등 입력
+
+2. eksctl 설치
+ - https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/getting-started-eksctl.html
+
+3. IAM 생성
+
+ - https://www.44bits.io/ko/post/publishing_and_managing_aws_user_access_key
+
+4. eksctl 생성 ( 시간이 좀 걸림 )
+
+ - eksctl create cluster --name teamtwohotel --version 1.17 --nodegroup-name standard-workers --node-type t3.medium --nodes 4 --nodes-min 1 --nodes-max 4
+
+5. Local EKS 클러스터 토큰가져오기 ( CI/CD 할때 필요 )
+
+- aws eks --region ap-northeast-2 update-kubeconfig --name teamtwohotel
+
+6. 아마존 컨테이너 레지스트리
+
+ - 아마존 > ecr (elastic container registry) > ecr 레파지터리 : ECR은 각 배포될 이미지 대상과 이름을 맞춰준다
+aws ecr create-repository --repository-name teamtwohotel --region ap-northeast-2
+aws ecr put-image-scanning-configuration --repository-name teamtwohotel --image-scanning-configuration scanOnPush=true --region ap-northeast-2
+
+7. AWS 컨테이너 레지스트리 로그인
+
+aws ecr get-login-password --region (Region-Code) | docker login --username AWS --password-stdin (Account-Id).dkr.ecr.(Region-Code).amazonaws.com
+
+8. AWS 레지스트리에 도커 이미지 푸시하기 (이건 위에서 한 거랑 좀 겹치는듯)
+
+aws ecr create-repository --repository-name (IMAGE_NAME) --region ap-northeast-2
+docker push (Account-Id).dkr.ecr.ap-northeast-2.amazonaws.com/(IMAGE_NAME):latest
+
+
+
 ## 파이프라인 샘플
 ![image](https://user-images.githubusercontent.com/80744224/118383378-16b02b00-b638-11eb-896e-d4de890f18cd.png)
 
