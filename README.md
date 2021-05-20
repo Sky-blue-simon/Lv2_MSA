@@ -257,6 +257,10 @@ Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니�
  
 3. AWS CLI tool Configuration
    
+   - ubuntu 설치 후, minikube 설치함.
+     
+     https://minikube.sigs.k8s.io/docs/start/
+   
    - AWS CLI 사용자 등록을 위한 자격증명 입력
      aws configure
    
