@@ -216,10 +216,17 @@ Docker 테스트
 [java 방식 CircuitBreaker] https://bcho.tistory.com/1247
 [javascript 방식 CircuitBreaker] https://velog.io/@vies00/Circuit-Breaker-Pattern
 
-** Istio 를 사용한 서킷 브레이크
+1. Istio 를 사용한 서킷 브레이크
 Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니다. 
 쿠버네티스에 배포되어있는 서비스에 sidecar 를 추가하여 네트워크 트래픽을 모니터링 후 지정한 시간을 오버하거나, 에러율이 높으면 트래픽을 끈어버리는 방법 입니다. 
 다만 직접 소스코드를 수정하지 못하니, fall-back 같은 처리는 하지 못합니다.
+
+2. 사전 준비사항:
+ - kubernetes 클러스터 준비
+ - istio 설치
+ - siege : http 로드테스트 도구
+ 
+
 
 ## 최종 평가
 https://workflowy.com/s/assessment/qJn45fBdVZn4atl3
