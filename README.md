@@ -194,11 +194,6 @@ Docker 테스트
  - docker push 690521455231.dkr.ecr.ap-northeast-2.amazonaws.com/admin-customer:v1
  - 오류가 발생한다면 aws ecr get-login-password 가 잘됐는 지 확인
 
-## 서킷브레이크
-
-![image](https://user-images.githubusercontent.com/80744224/118924312-df16eb00-b977-11eb-8ddf-e51ab0469cc0.png)
-
-
 
 
 ## 파이프라인 샘플
@@ -210,6 +205,10 @@ Docker 테스트
 - Spinnaker - CD 도구
 - Helm - 쿠버네티스 패키지 관리 도구
 - Kubernetes - 배포 플랫폼
+
+## 서킷브레이크
+
+![image](https://user-images.githubusercontent.com/80744224/118924312-df16eb00-b977-11eb-8ddf-e51ab0469cc0.png)
 
 
 ## 최종 평가
