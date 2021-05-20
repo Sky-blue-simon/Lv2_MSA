@@ -194,6 +194,10 @@ Docker 테스트
  - docker push 690521455231.dkr.ecr.ap-northeast-2.amazonaws.com/admin-customer:v1
  - 오류가 발생한다면 aws ecr get-login-password 가 잘됐는 지 확인
 
+## 서킷브레이크
+
+![image](https://user-images.githubusercontent.com/80744224/118924312-df16eb00-b977-11eb-8ddf-e51ab0469cc0.png)
+
 
 
 
