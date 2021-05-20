@@ -186,7 +186,7 @@ Docker 테스트
 
 1. Windows 10 에 Docker 데몬 (Docker for 설치
 
-- https://www.docker.com/products/docker desktop
+- https://www.docker.com/products/docker-desktop
 - https://steemit.com/kr/@mystarlight/docker
 
 1. 먼저 mvn package 로 jar 파일을 만들어야 함.
