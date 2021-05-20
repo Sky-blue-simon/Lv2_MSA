@@ -281,9 +281,7 @@ Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니�
        
        eksctl create cluster --name admin04-eks --version 1.17 --nodegroup-name standard-workers --node-type t3.medium --nodes 4 --nodes-min 1 --nodes-max 4
        
-       ==>
-       cluster : user15-sk-Cluster
-       region : ap-northeast-2
+
 
 
 
