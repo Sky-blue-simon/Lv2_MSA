@@ -169,17 +169,31 @@ Docker 테스트
 6. 아마존 컨테이너 레지스트리
 
  - 아마존 > ecr (elastic container registry) > ecr 레파지터리 : ECR은 각 배포될 이미지 대상과 이름을 맞춰준다
-aws ecr create-repository --repository-name teamtwohotel --region ap-northeast-2
-aws ecr put-image-scanning-configuration --repository-name teamtwohotel --image-scanning-configuration scanOnPush=true --region ap-northeast-2
+ - aws ecr create-repository --repository-name teamtwohotel --region ap-northeast-2
+ - aws ecr put-image-scanning-configuration --repository-name teamtwohotel --image-scanning-configuration scanOnPush=true --region ap-northeast-2
 
 7. AWS 컨테이너 레지스트리 로그인
 
-aws ecr get-login-password --region (Region-Code) | docker login --username AWS --password-stdin (Account-Id).dkr.ecr.(Region-Code).amazonaws.com
+ - aws ecr get-login-password --region (Region-Code) | docker login --username AWS --password-stdin (Account-Id).dkr.ecr.(Region-Code).amazonaws.com
 
 8. AWS 레지스트리에 도커 이미지 푸시하기 (이건 위에서 한 거랑 좀 겹치는듯)
 
-aws ecr create-repository --repository-name (IMAGE_NAME) --region ap-northeast-2
-docker push (Account-Id).dkr.ecr.ap-northeast-2.amazonaws.com/(IMAGE_NAME):latest
+ - aws ecr create-repository --repository-name (IMAGE_NAME) --region ap-northeast-2
+ - docker push (Account-Id).dkr.ecr.ap-northeast-2.amazonaws.com/(IMAGE_NAME):latest
+
+
+## 도커 빌드 및 푸쉬
+
+1. 먼저 mvn package 로 jar 파일을 만들어야 함.
+
+2. 도커 빌드
+ - 리포지토리 주소 앞에 docker build -t 를 붙이고 뒤에 :v1 . 을 붙여서 각 프로젝트(로컬) 디렉토리에서 실행
+ - docker build -t (ID).dkr.ecr.ap-northeast-2.amazonaws.com/adminxx-game-gateway:v1 .
+
+3. 도커 푸쉬
+ - docker push 690521455231.dkr.ecr.ap-northeast-2.amazonaws.com/admin-customer:v1
+ - 오류가 발생한다면 aws ecr get-login-password 가 잘됐는 지 확인
+
 
 
 
