@@ -199,6 +199,9 @@ Docker 테스트
  - docker push 690521455231.dkr.ecr.ap-northeast-2.amazonaws.com/admin-customer:v1
  - 오류가 발생한다면 aws ecr get-login-password 가 잘됐는 지 확인
 
+## 아마존
+1. AWS 계정 생성
+ - https://portal.aws.amazon.com 접속
 
 
 ## 파이프라인 샘플
