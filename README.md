@@ -184,8 +184,9 @@ Docker 테스트
 
 ## 도커 빌드 및 푸쉬
 
-1. 도커 설치하기 (Windows용)
+1. Windows 10 에 Docker 데몬 (Docker for 설치
 
+- https://www.docker.com/products/docker desktop
 - https://steemit.com/kr/@mystarlight/docker
 
 1. 먼저 mvn package 로 jar 파일을 만들어야 함.
