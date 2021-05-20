@@ -210,6 +210,16 @@ Docker 테스트
 
 ![image](https://user-images.githubusercontent.com/80744224/118924312-df16eb00-b977-11eb-8ddf-e51ab0469cc0.png)
 
+요청/응답 통신중에 특정 서비스가 응답시간이 느려진다거나, 오류가 특정치 이상 발생할때 서킷브래이커를 적용하여 빠르게 차단을 시켜버립니다. 쇼핑몰에서 주문을 하였는데, 배송서비스가 느려서 주문 자체가 느려지는 것보다, 배송서비스를 잠시 차단 시키더라도 주문을 빠르게 받는 것이 사용자 입장에서는 더 효율적입니다. 
+
+자바로 서킷 브레이크 구현하는 방법
+[java 방식 CircuitBreaker] https://bcho.tistory.com/1247
+[javascript 방식 CircuitBreaker] https://velog.io/@vies00/Circuit-Breaker-Pattern
+
+** Istio 를 사용한 서킷 브레이크
+Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니다. 
+쿠버네티스에 배포되어있는 서비스에 sidecar 를 추가하여 네트워크 트래픽을 모니터링 후 지정한 시간을 오버하거나, 에러율이 높으면 트래픽을 끈어버리는 방법 입니다. 
+다만 직접 소스코드를 수정하지 못하니, fall-back 같은 처리는 하지 못합니다.
 
 ## 최종 평가
 https://workflowy.com/s/assessment/qJn45fBdVZn4atl3
