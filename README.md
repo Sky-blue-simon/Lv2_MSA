@@ -184,6 +184,10 @@ Docker 테스트
 
 ## 도커 빌드 및 푸쉬
 
+1. 도커 설치하기 (Windows용)
+
+- https://steemit.com/kr/@mystarlight/docker
+
 1. 먼저 mvn package 로 jar 파일을 만들어야 함.
 
 2. 도커 빌드
