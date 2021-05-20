@@ -268,11 +268,14 @@ Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니�
      cat ~/.aws/config
      cat ~/.aws/credentials
      
-    - EKS Client(eksctl) Installation
+    - EKS Client(eksctl) Installation (EKS Client (eksctl) 설치)
      - EKS 에서 Kubernetes 클러스터 생성 관리 도구
-     - Linux Curl 을 사용한 eksctl 설치(about 15' 소용)
+     - Linux Curl 을 사용한 eksctl 설치(about 15' 소용) (교재)
        curl --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz"|tar xz -C /tmp
        sudo mv /tmp/eksctl /usr/local/bin
+     - eks 생성(강의 실습)
+       eksctl create cluster --name user09-eks --version 1.17 --nodegroup-name standard-workers --node-type t3.medium --nodes 4 --nodes-min 1 --nodes-max 4
+       eksctl create cluster --name user15-sk-Cluster --version 1.15 --nodegroup-name standard-workers --node-type t3.medium --nodes 2 --nodes-min 1 --nodes-max 3
 
 
 
