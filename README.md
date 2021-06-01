@@ -290,6 +290,8 @@ Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니�
 
 helm 사전에 설치해야함
 
+https://medium.com/google-cloud/installing-helm-in-google-kubernetes-engine-7f07f43c536e
+
 kubectl --namespace kube-system create sa tiller      # helm 의 설치관리자를 위한 시스템 사용자 생성
 
 kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
@@ -306,6 +308,10 @@ helm install my-kafka --namespace kafka incubator/kafka
 ## Helm 설치
 
 curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+helm 설치 
+
+https://medium.com/google-cloud/installing-helm-in-google-kubernetes-engine-7f07f43c536e
 
 kubectl --namespace kube-system create sa tiller      # helm 의 설치관리자를 위한 시스템 사용자 생성
 
