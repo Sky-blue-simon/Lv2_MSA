@@ -286,6 +286,14 @@ Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니�
        eksctl create cluster --name admin04-eks --version 1.17 --nodegroup-name standard-workers --node-type t3.medium --nodes 4 --nodes-min 1 --nodes-max 4
        
 
+## EKS에 카프카 설치
+helm 사전에 설치해야함
+kubectl --namespace kube-system create sa tiller      # helm 의 설치관리자를 위한 시스템 사용자 생성
+kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+helm repo add incubator https://charts.helm.sh/incubator
+helm repo update
+kubectl create ns kafka
+helm install my-kafka --namespace kafka incubator/kafka
 
 
 
