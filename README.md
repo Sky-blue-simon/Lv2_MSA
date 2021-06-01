@@ -304,6 +304,21 @@ kubectl create ns kafka
 
 helm install my-kafka --namespace kafka incubator/kafka
 
+카프카 설치 확인
+kubectl get all -n kafka
+
+카프카 토픽 생성
+kubectl -n kafka exec my-kafka-0 -- /usr/bin/kafka-topics --zookeeper my-kafka-zookeeper:2181 --topic game --create --partitions 1 --replication-factor 1
+
+토픽 확인
+kubectl -n kafka exec my-kafka-0 -- /usr/bin/kafka-topics --zookeeper my-kafka-zookeeper:2181 --list
+
+이벤트 발행하기 (producer, 딱히 필요없음)
+kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-producer --broker-list my-kafka:9092 --topic teamtwohotel
+
+이벤트 수신하기
+kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootstrap-server my-kafka:9092 --topic teamtwohotel --from-beginning
+
 
 ## Helm 설치
 
