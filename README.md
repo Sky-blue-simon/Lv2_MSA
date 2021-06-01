@@ -307,11 +307,42 @@ helm install my-kafka --namespace kafka incubator/kafka
 
 ## Helm 설치
 
-curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+- curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash (아래 페이지 참조)
 
 helm 설치 
 
 https://medium.com/google-cloud/installing-helm-in-google-kubernetes-engine-7f07f43c536e
+
+우분투에서 helm 설치
+
+1) Helm 설치
+
+Helm은 kubectl 명령과 kubeconfig 파일이 있는 서버에서 설치해야 한다.
+
+2) 바이너리 다운로드
+
+wget을 이용하여 Helm 바이너리 파일을 다운로드 받는다.
+
+https://github.com/helm/release 에서 버전을 확인한다.
+
+위 URL에 접속하여 확인 후, 알맞은 버전을 다운로드 한다.
+
+wget https://get.helm.sh/helm-v3.5.3-linux-amd64.tar.gz
+
+3) 다운로드 받은 파일 압축해제
+
+tar xf helm-v3.5.3-linux-amd64.tar.gz
+
+4) 파일 실행을 위한 경로 이동
+
+sudo cp linux-amd64/helm /usr/local/bin/helm
+
+5) Helm 실행 확인
+
+helm version
+
+
+
 
 kubectl --namespace kube-system create sa tiller      # helm 의 설치관리자를 위한 시스템 사용자 생성
 
