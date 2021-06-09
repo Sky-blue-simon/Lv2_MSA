@@ -133,6 +133,10 @@
 - point 확인
   
   http GET http://localhost:8088/points
+  
+- gift 확인
+  
+  http GET http://localhost:8088/gifts
    
    
 
